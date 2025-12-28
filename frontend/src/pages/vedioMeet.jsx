@@ -15,7 +15,7 @@ import styles from "../styles/vedioMeet.module.css"
 import Navbar from "../Navbar";
 import Footer from "../footer";
 import { useNavigate } from "react-router-dom";
-const server_url = `http://localhost:8000`;
+const server_url = `https://meetly-9fnn.onrender.com`;
 
 let connections = {};
 

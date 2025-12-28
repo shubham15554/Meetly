@@ -21,7 +21,7 @@ export  const AuthProvider = ({children}) => {
     const handleRegister =  async (name , username , password)=>{
        try{
        
-        let request = await axios.post("http://localhost:8000/api/v1/user/register" , {
+        let request = await axios.post("https://meetly-9fnn.onrender.com/api/v1/user/register" , {
             name : name,
             username: username,
             password: password
@@ -41,7 +41,7 @@ export  const AuthProvider = ({children}) => {
     const handleLogin =  async (username,password)=>{
        try{
           
-         let request = await axios.post("http://localhost:8000/api/v1/user/login" , {
+         let request = await axios.post("https://meetly-9fnn.onrender.com/api/v1/user/login" , {
             username: username,
             password: password
          } );
@@ -59,7 +59,7 @@ export  const AuthProvider = ({children}) => {
 
     const getHistoryOfUser = async () =>{
       try{
-        let req = await axios.get("http://localhost:8000/api/v1/user/get_all_activity" , {
+        let req = await axios.get("https://meetly-9fnn.onrender.com/api/v1/user/get_all_activity" , {
           params:{
             token : localStorage.getItem("token")
           }
@@ -78,7 +78,7 @@ export  const AuthProvider = ({children}) => {
     const addToHistory = async (meetingCode) =>{
       try{
         console.log("Adding to history");
-        let req = await axios.post("http://localhost:8000/api/v1/user/add_to_activity" , {
+        let req = await axios.post("https://meetly-9fnn.onrender.com/api/v1/user/add_to_activity" , {
           token : localStorage.getItem("token"),
           meeting_code : meetingCode
         });
