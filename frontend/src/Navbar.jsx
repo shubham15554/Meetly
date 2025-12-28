@@ -12,36 +12,36 @@ function Navbar() {
    let token = localStorage.getItem("token");
 
     return ( 
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-nav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/" style={{color:"#6366F1", fontWeight:"bold" , fontSize:"1.5rem" , marginLeft:"2rem"}}><img src="/icons8-zoom.svg" alt="" />&nbsp;&nbsp;&nbsp;Meetly</a>
+<nav className="navbar navbar-expand-lg bg-body-tertiary shadow-nav">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/" style={{color:"#6366F1", fontWeight:"bold" , fontSize:"1.5rem" , marginLeft:"2rem"}}><img src="/icons8-zoom.svg" alt="" />&nbsp;&nbsp;&nbsp;Meetly</Link>
          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/guestJoin">Join as guest</a>
+          <div className="collapse navbar-collapse collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/guestJoin">Join as guest</Link>
               </li>
-               {token && <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+               {token && <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
               </li>}
               {
-                !token && <li class="nav-item">
-                <a class="nav-link" href="/auth">Register</a>
+                !token && <li className="nav-item">
+                <Link className="nav-link" to="/auth">Register</Link>
               </li>
               }
               {
-                !token && <li class="nav-item">
-                <a class="nav-link" href="/auth">Login</a>
+                !token && <li className="nav-item">
+                <Link className="nav-link" to="/auth">Login</Link>
               </li>
               }
-              {token && <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/history">History</a>
+              {token && <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/history">History</Link>
               </li>}
-              {token && <li class="nav-item">
-                {/* <a class="nav-link active" aria-current="page" href="/home">Logout</a> */}
+              {token && <li className="nav-item">
+                {/* <Link className="nav-link active" aria-current="page" to="/home">Logout</Link> */}
                 <button className="btn btn-outline-primary" onClick={handleLogout}>Logout</button>
               </li>}
              
