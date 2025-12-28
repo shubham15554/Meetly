@@ -4,7 +4,7 @@ import { Navigate, useNavigate } from 'react-router-dom'
 import "../App.css";
 import { Button, getAppBarUtilityClass, IconButton, TextField, unstable_useId } from '@mui/material';
 import RestoreIcon from '@mui/icons-material/Restore';
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from '../context/authContext';
 import { v4 as uuidv4 } from 'uuid';
 import Navbar from '../Navbar';
 import NewMeeting from './newMeeting';
