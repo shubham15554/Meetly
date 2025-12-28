@@ -83,7 +83,7 @@ const getUserHistory = async (req , res ) =>{
     try{
         const user = await User.findOne({token : token});
         console.log(user)
-        const meetings =  await Meeting.find({});
+        const meetings =  await Meeting.find({userId : user.username});
        
         res.json(meetings);
     }
