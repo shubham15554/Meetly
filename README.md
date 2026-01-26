@@ -48,6 +48,7 @@ This project is divided into two parts: **Frontend** and **Backend**. You will n
    cd meetly
 
 2. **Setup Backend**
+   ```bash
    cd backend/src
     npm install
     Create a .env file and add your variables
@@ -55,6 +56,7 @@ This project is divided into two parts: **Frontend** and **Backend**. You will n
     nodemon app.js
 
 3. **Setup Frontend**
+    ```bash
     Open a new terminal window
     cd frontend
     npm install
