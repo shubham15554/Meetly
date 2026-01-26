@@ -44,7 +44,7 @@ This project is divided into two parts: **Frontend** and **Backend**. You will n
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/your-username/meetly.git](https://github.com/your-username/meetly.git)
+   git clone https://github.com/shubham15554/Meetly.git
    cd meetly
 
 2. **Setup Backend**
