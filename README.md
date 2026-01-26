@@ -48,18 +48,17 @@ This project is divided into two parts: **Frontend** and **Backend**. You will n
    cd meetly
 
 2. **Setup Backend**
-    Bash
-    cd backend
-    cd src
+   cd backend/src
     npm install
-    # Create a .env file and add your backend variables
+    Create a .env file and add your variables
+    npm install -g nodemon  # If not already installed
     nodemon app.js
 
 3. **Setup Frontend**
-    # Open a new terminal window
+    Open a new terminal window
     cd frontend
     npm install
-    # Create a .env.local file and add your frontend variables
+    Create a .env.local file and add your frontend variables
     npm run dev
 
 ## 📖 How to Use
